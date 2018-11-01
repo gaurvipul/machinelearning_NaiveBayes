@@ -13,4 +13,10 @@ def prepData(points = 1000):
             y[i]=1.0
             
     X = [[g,s] for g,s in zip(grade, bumpy)]
-    print (X)
+    split = int((0.75 * points))
+    X_train = X[0:split]
+    X_test = X[split:]
+    y_train = y[0:split]
+    y_test = y[split:]
+    
+    return X_train, y_train, X_test, y_test
