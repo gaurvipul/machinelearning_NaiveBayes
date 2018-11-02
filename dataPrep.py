@@ -20,3 +20,5 @@ def prepData(points = 1000):
     y_test = y[split:]
     
     return X_train, y_train, X_test, y_test
+
+# End of program
