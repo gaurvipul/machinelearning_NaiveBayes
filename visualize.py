@@ -38,13 +38,20 @@ def plotIt(clf, X_test, y_test):
     
     plt.savefig("test.png")
     
+    plt.show()
+    
 import base64
 import json
 import subprocess
+from PIL import Image
 
-def output_image(name, format, bytes):
-    image_start = "BEGIN_IMAGE_vGaUr9ViDhU"
-    image_end = "END_IMAGE_t3sT1fItWoRkS"
+def output_image():
+    Image.open("test.png").show
+#f = Image.open("file.png").show()
+
+def output_image1(name, format, bytes):
+    image_start = "BEGIN_IMAGE_f9825uweof8jw9fj4r8"
+    image_end = "END_IMAGE_0238jfw08fjsiufhw8frs"
     data={}
     data['name'] = name
     data['format'] = format
